@@ -35,10 +35,10 @@ def calculate_cell_score_selim(y_true, y_pred, num_threads=32, ids=None):
 def get_cells(mask):
     return measure.label(mask, return_num=True)
 
+
 def score_kaggle(yp):
     y, p = yp
     return calc_score(np.expand_dims(y, 0), np.expand_dims(p, 0))
-
 
 
 def calc_score(labels, y_pred):
